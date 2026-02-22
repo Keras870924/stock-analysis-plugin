@@ -183,6 +183,30 @@ Stop-loss reference: [chip peak support level or key price]
 
 ---
 
+## Step 3: Save Report
+
+After generating the analysis report, **always save it to a file automatically** — do not ask the user for confirmation.
+
+**Default save path:** `./reports/TICKER-YYYY-MM-DD.md` (relative to current working directory)
+
+**Path override:** If the user specifies a path in the command, use that instead.
+- "幫我分析 NVDA" → `./reports/NVDA-2026-02-23.md`
+- "幫我分析 NVDA，存到 ~/Desktop" → `~/Desktop/NVDA-2026-02-23.md`
+- "幫我分析 NVDA，存到 D:/stocks" → `D:/stocks/NVDA-2026-02-23.md`
+
+**Steps:**
+1. Create `./reports/` directory if it doesn't exist (`mkdir -p ./reports`)
+2. Write the full report content to the file using the Write tool
+3. Tell the user: "報告已存到 `[path]`"
+
+**Report file content** = the full Output Format report (everything from `## TICKER` onwards), plus a header line:
+```
+# [TICKER] Analysis — [YYYY-MM-DD]
+[full report content]
+```
+
+---
+
 ## Common Mistakes
 
 | Mistake | Correction |
