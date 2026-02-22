@@ -149,37 +149,64 @@ Price near chip peak support on pullback?
 
 ## Output Format
 
-Use this structure for the final report (both modes):
+Use this structure for the final report (both modes). Follow the Apple Badge Label style exactly — no emojis, clean labels, structured layout.
 
 ```
-## [TICKER] — [Company Name]
+# [TICKER] — [Company Name]
+*[YYYY-MM-DD]*
 
-**Business**
+---
+
+**BUSINESS**
 [One sentence: what it does, who it serves (2B/2C)]
-Moat score: [X]/4 — [brief assessment]
+Moat Score: [X] / 4 — [Strong / Decent / Weak]
 
-**Financial Health**
-- Revenue: [amount] | YoY growth: [%] → [✅ / ⚠️ / ❌]
-- EBIT Margin: [%] → [✅ / ⚠️ / ❌]
-- Operating Cash Flow: [positive/negative] → [✅ / ⚠️ / ❌]
-- Free Cash Flow: [positive/negative] → [✅ / ⚠️ / ❌]
+---
 
-**Valuation**
-P/E: [x] | P/S: [x] | P/B: [x] — [above / at / below] peer average
-Market expectation: [high / medium / low]
+**FINANCIAL HEALTH**
 
-**Technical Assessment**
-Trend: [X o'clock direction] — [description]
-Fundamentals vs. price: [aligned / diverging]
-Key support levels (chip peaks): [price ranges if available]
+| Metric         | Value            | Status   |
+|----------------|------------------|----------|
+| Revenue        | [amount]         | [PASS] / [WATCH] / [FAIL] |
+| Revenue Growth | [%] YoY          | [PASS] / [WATCH] / [FAIL] |
+| EBIT Margin    | [%]              | [PASS] / [WATCH] / [FAIL] |
+| Operating CF   | Positive/Negative| [PASS] / [WATCH] / [FAIL] |
+| Free CF        | [amount]         | [PASS] / [WATCH] / [FAIL] |
 
-**Recommendation**
-[Choose one: 🚫 Avoid | ⏳ Observe | 🔍 Watch for entry | ✅ Consider entry on pullback]
-[2–3 sentence reasoning]
+**VALUATION**
+P/E [x]x  ·  P/S [x]x  ·  P/B [x]x
+Market expectation: [Premium / Fair / Discounted] — [vs. peer context]
 
-**Risk Note**
-Stop-loss reference: [chip peak support level or key price]
+---
+
+**TECHNICAL**
+
+| | |
+|--|--|
+| Trend | [X o'clock] — [description] |
+| Alignment | [Aligned / Diverging] — [brief reason] |
+| Key Support | [price range]  ·  [price range] |
+
+---
+
+**VERDICT**
+
+`[AVOID / OBSERVE / WATCH / ENTRY]`
+
+[2–3 sentences of reasoning.]
+Stop-loss: [chip peak support level or key price]
 ```
+
+**Status badge rules:**
+- `[PASS]` — metric meets standard
+- `[WATCH]` — below ideal but not disqualifying
+- `[FAIL]` — red flag, disqualifying condition
+
+**Verdict badge rules:**
+- `AVOID` — fundamental red flags, do not invest
+- `OBSERVE` — fundamentals OK but technicals not ready
+- `WATCH` — technicals forming, monitor for entry setup
+- `ENTRY` — fundamentals pass + 2 o'clock trend + at chip peak support
 
 ---
 
@@ -199,11 +226,7 @@ After generating the analysis report, **always save it to a file automatically**
 2. Write the full report content to the file using the Write tool
 3. Tell the user: "報告已存到 `[path]`"
 
-**Report file content** = the full Output Format report (everything from `## TICKER` onwards), plus a header line:
-```
-# [TICKER] Analysis — [YYYY-MM-DD]
-[full report content]
-```
+**Report file content** = the full Output Format report starting from `# [TICKER] — [Company Name]`.
 
 ---
 
