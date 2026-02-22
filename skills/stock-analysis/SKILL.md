@@ -149,64 +149,80 @@ Price near chip peak support on pullback?
 
 ## Output Format
 
-Use this structure for the final report (both modes). Follow the Apple Badge Label style exactly — no emojis, clean labels, structured layout.
+Use this structure for the final report (both modes). Follow the Apple Badge Label style: bilingual headers, 4-column tables with explanation, clean `---` separators, no emojis.
 
 ```
 # [TICKER] — [Company Name]
-*[YYYY-MM-DD]*
+*分析日期 Analysis Date：[YYYY-MM-DD]*
 
 ---
 
-**BUSINESS**
-[One sentence: what it does, who it serves (2B/2C)]
-Moat Score: [X] / 4 — [Strong / Decent / Weak]
+**BUSINESS  商業模式**
+
+| 項目 | 內容 |
+|------|------|
+| 業務描述 Description | [One sentence: what it does, who it serves (2B/2C)] |
+| 護城河 Moat Score | [X] / 4 — [Strong / Decent / Weak] |
+| 無差別化產品 Undifferentiated | [■ 符合 / ⬜ 部分符合 / ⬜ 不符合] — [brief reason] |
+| 最廣泛用戶 Widest Users | [■ 符合 / ⬜ 部分符合 / ⬜ 不符合] — [brief reason] |
+| 自由定價 Free Pricing | [■ 符合 / ⬜ 部分符合 / ⬜ 不符合] — [brief reason] |
+| 市場壟斷 Monopoly | [■ 符合 / ⬜ 部分符合 / ⬜ 不符合] — [brief reason] |
 
 ---
 
-**FINANCIAL HEALTH**
+**FINANCIAL HEALTH  財務健康**
 
-| Metric         | Value            | Status   |
-|----------------|------------------|----------|
-| Revenue        | [amount]         | [PASS] / [WATCH] / [FAIL] |
-| Revenue Growth | [%] YoY          | [PASS] / [WATCH] / [FAIL] |
-| EBIT Margin    | [%]              | [PASS] / [WATCH] / [FAIL] |
-| Operating CF   | Positive/Negative| [PASS] / [WATCH] / [FAIL] |
-| Free CF        | [amount]         | [PASS] / [WATCH] / [FAIL] |
-
-**VALUATION**
-P/E [x]x  ·  P/S [x]x  ·  P/B [x]x
-Market expectation: [Premium / Fair / Discounted] — [vs. peer context]
+| 指標              | 數值          | 評級    | 說明                          |
+|-------------------|---------------|---------|-------------------------------|
+| 年收入 Revenue     | [amount]      | [PASS/WATCH/FAIL] | [1-line context]  |
+| 收入成長 Growth    | [%] YoY       | [PASS/WATCH/FAIL] | [1-line context]  |
+| 營業利潤率 EBIT    | [%]           | [PASS/WATCH/FAIL] | [1-line context]  |
+| 營運現金流 Op. CF  | Pos/Neg       | [PASS/WATCH/FAIL] | [1-line context]  |
+| 自由現金流 FCF     | [amount]      | [PASS/WATCH/FAIL] | [1-line context]  |
 
 ---
 
-**TECHNICAL**
+**VALUATION  市場估值**
 
-| | |
-|--|--|
-| Trend | [X o'clock] — [description] |
-| Alignment | [Aligned / Diverging] — [brief reason] |
-| Key Support | [price range]  ·  [price range] |
+| 指標 | 數值 | 說明 |
+|------|------|------|
+| P/E 本益比 | [x]x | [vs. peer average and what it implies] |
+| P/S 股價營收比 | [x]x | [what the market is pricing in] |
+| P/B 股價淨值比 | [x]x | [context e.g. buybacks, asset-light] |
+| 市場預期 Expectation | [Premium/Fair/Discounted] | [1-line interpretation] |
 
 ---
 
-**VERDICT**
+**TECHNICAL  技術面**
 
-`[AVOID / OBSERVE / WATCH / ENTRY]`
+| 項目 | 數值 | 說明 |
+|------|------|------|
+| 趨勢方向 Trend | [X o'clock] | [describe recent price action and direction] |
+| 基本面與股價 Alignment | [Aligned/Diverging] | [why aligned or diverging] |
+| 主要支撐 Key Support | [price range] | [why this level matters — chip peak context] |
+| 次要支撐 Secondary | [price range] | [longer-term support context] |
 
-[2–3 sentences of reasoning.]
-Stop-loss: [chip peak support level or key price]
+---
+
+**VERDICT  操作結論**
+
+`[AVOID  不宜參與 / OBSERVE  觀望 / WATCH  留意 / ENTRY  考慮進場]`
+
+[3–4 sentences: summarise fundamental quality, key concern, technical condition, and what needs to happen before entry.]
+
+Stop-loss 止損參考：[chip peak support level or key price and what to do when breached]
 ```
 
 **Status badge rules:**
-- `[PASS]` — metric meets standard
-- `[WATCH]` — below ideal but not disqualifying
-- `[FAIL]` — red flag, disqualifying condition
+- `[PASS]` — 達標
+- `[WATCH]` — 未達理想但非致命缺陷
+- `[FAIL]` — 紅旗，構成否決條件
 
 **Verdict badge rules:**
-- `AVOID` — fundamental red flags, do not invest
-- `OBSERVE` — fundamentals OK but technicals not ready
-- `WATCH` — technicals forming, monitor for entry setup
-- `ENTRY` — fundamentals pass + 2 o'clock trend + at chip peak support
+- `AVOID` — 基本面有紅旗，不參與
+- `OBSERVE` — 基本面 OK，技術面尚未就緒
+- `WATCH` — 技術面逐漸成形，持續監控等待進場訊號
+- `ENTRY` — 基本面通過 + 2 點鐘趨勢 + 位於籌碼峰支撐附近
 
 ---
 
