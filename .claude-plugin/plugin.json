@@ -1,0 +1,9 @@
+{
+  "name": "stock-analysis-plugin",
+  "description": "Stock analysis skill using a two-layer fundamental + technical framework for US and Taiwan stocks",
+  "version": "1.0.0",
+  "author": {
+    "name": "keras"
+  },
+  "license": "MIT"
+}
