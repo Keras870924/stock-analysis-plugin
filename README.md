@@ -11,7 +11,7 @@ Reports are generated in a bilingual (Chinese/English) Apple-style format and au
 In Claude Code, run:
 
 ```
-/plugin install stock-analysis-plugin@Keras870924/stock-analysis-plugin
+/plugin marketplace add Keras870924/stock-analysis-plugin
 ```
 
 ---
