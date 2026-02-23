@@ -1,0 +1,24 @@
+{
+  "name": "keras-plugins",
+  "owner": {
+    "name": "keras",
+    "email": "keraschiu@gmail.com"
+  },
+  "metadata": {
+    "description": "Stock analysis plugins by keras"
+  },
+  "plugins": [
+    {
+      "name": "stock-analysis-plugin",
+      "source": ".",
+      "description": "Stock analysis skill using a two-layer fundamental + technical framework for US and Taiwan stocks",
+      "version": "1.0.0",
+      "author": {
+        "name": "keras"
+      },
+      "license": "MIT",
+      "keywords": ["stock", "finance", "analysis", "fundamental", "technical", "investing"],
+      "category": "finance"
+    }
+  ]
+}
